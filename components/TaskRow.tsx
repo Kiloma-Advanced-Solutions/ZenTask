@@ -19,7 +19,7 @@ export default function TaskRow({ task }: TaskRowProps) {
         <p className={styles.allocatedTime}>{task.allocatedMinutes} minutes allocated</p>
       </div>
       
-      <div className={styles.timerSection}>
+      <div className={styles.buttonSection}>
         <Timer running={isRunning} />
         <button 
           className={`${styles.toggleButton} ${isRunning ? styles.stopButton : styles.startButton}`}

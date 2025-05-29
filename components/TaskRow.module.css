@@ -34,34 +34,10 @@
   font-weight: 500;
 }
 
-.timerSection {
+.buttonSection {
   display: flex;
   align-items: center;
   gap: 1rem;
-}
-
-.timerSection span {
-  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
-  font-size: 1.125rem;
-  font-weight: 600;
-  min-width: 3.5rem;
-  text-align: center;
-  padding: 0.5rem 0.75rem;
-  background: #f9fafb;
-  border-radius: 6px;
-  border: 1px solid #e5e7eb;
-}
-
-.timerSection .timer-running {
-  background: #fef3c7;
-  border-color: #f59e0b;
-  color: #92400e;
-}
-
-.timerSection .timer-stopped {
-  background: #f3f4f6;
-  border-color: #d1d5db;
-  color: #4b5563;
 }
 
 .toggleButton {
@@ -118,7 +94,7 @@
     gap: 1rem;
   }
   
-  .timerSection {
-    justify-content: space-between;
+  .buttonSection {
+    justify-content: center;
   }
 } 
