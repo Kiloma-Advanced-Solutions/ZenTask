@@ -17,8 +17,8 @@ This starter provides a foundation with:
 
 Candidates will be asked to implement 5 core features:
 
-1. **Persist elapsed time** - Store/restore timer state from localStorage
-2. **Live mm:ss display** - Replace console.log with visible timer (01:05)
+1. **Live mm:ss display** - Replace console.log with visible timer (01:05)
+2. **Persist elapsed time** - Store/restore timer state from localStorage
 3. **Start/Stop All** - Add header button to control all timers
 4. **Overdue indicator** - Visual feedback when time exceeds allocation
 5. **POST on stop** - Complete the API endpoint and call it when timers stop
