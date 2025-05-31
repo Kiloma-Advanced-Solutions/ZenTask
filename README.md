@@ -29,9 +29,8 @@ Plus an optional bonus: **Dark mode toggle**
 
 - **Next.js 14** (App Router)
 - **TypeScript** (strict mode)
-- **Zustand** for state management
 - **CSS Modules** for styling
-- **pnpm** for package management
+- **npm / pnpm** for package management
 - **ESLint** for code quality
 - **Edge Runtime** for API routes
 
