@@ -22,7 +22,7 @@ export default function Timer({ running }: TimerProps) {
       });
     }, 1000);
     
-    // ❌ BUG: missing `return () => clearInterval(id);`
+
     return () => clearInterval(id);
   }, [running]);
 
