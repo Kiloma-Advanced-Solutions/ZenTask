@@ -33,5 +33,7 @@ export default function Timer({ running }: TimerProps) {
   }, [running]);
 
   // TODO: Candidate should replace console.log with visible mm:ss display
-  return null;
+  return (
+    <div></div>
+  );
 } 
