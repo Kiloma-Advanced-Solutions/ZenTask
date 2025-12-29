@@ -13,7 +13,6 @@ export default function Timer({ running }: TimerProps) {
   useEffect(() => {
     if (!running) return;
     
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const id = setInterval(() => {
       setSeconds(s => {
         const newSeconds = s + 1;
@@ -28,6 +27,7 @@ export default function Timer({ running }: TimerProps) {
 
   useEffect(() => {
     if (!running) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setSeconds(0);
     }
   }, [running]);
