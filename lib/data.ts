@@ -1,5 +1,5 @@
 'use server';
 
-export function fetchTasks() {
-  throw new Error('Not implemented');
+export async function fetchTasks() {
+    throw new Error('Not implemented');
 }
