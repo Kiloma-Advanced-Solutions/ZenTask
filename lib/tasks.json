@@ -1,0 +1,8 @@
+[
+  { "id": 1, "title": "Blog post", "allocatedMinutes": 1 },
+  { "id": 2, "title": "Code review", "allocatedMinutes": 15 },
+  { "id": 3, "title": "Quick email", "allocatedMinutes": 5 },
+  { "id": 4, "title": "Team meeting", "allocatedMinutes": 30 },
+  { "id": 5, "title": "Project planning", "allocatedMinutes": 45 }
+]
+
