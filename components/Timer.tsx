@@ -7,33 +7,26 @@ interface TimerProps {
 }
 
 export default function Timer({ running }: TimerProps) {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const formatMMSS = (totalSeconds: number) => {
+    const mm = String(Math.floor(totalSeconds / 60)).padStart(2, '0');
+    const ss = String(totalSeconds % 60).padStart(2, '0');
+    return `${mm}:${ss}`;
+  };
+
   const [seconds, setSeconds] = useState(0);
 
   useEffect(() => {
     if (!running) return;
-    
-    const id = setInterval(() => {
-      setSeconds(s => {
-        const newSeconds = s + 1;
-        console.log(newSeconds);
-        return newSeconds;
-      });
+
+    const id = window.setInterval(() => {
+      setSeconds((s) => s + 1);
     }, 1000);
-    
 
-    return () => clearInterval(id);
-  }, [running]);
-
-  useEffect(() => {
-    if (!running) {
-      // eslint-disable-next-line react-hooks/set-state-in-effect
+    return () => {
+      window.clearInterval(id);
       setSeconds(0);
-    }
+    };
   }, [running]);
 
-  // TODO: Candidate should replace console.log with visible mm:ss display
-  return (
-    <div></div>
-  );
+  return <div>{formatMMSS(seconds)}</div>;
 } 
