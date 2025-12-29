@@ -7,12 +7,7 @@ interface TimerProps {
 }
 
 export default function Timer({ running }: TimerProps) {
-  const formatMMSS = (totalSeconds: number) => {
-    const mm = String(Math.floor(totalSeconds / 60)).padStart(2, '0');
-    const ss = String(totalSeconds % 60).padStart(2, '0');
-    return `${mm}:${ss}`;
-  };
-
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [seconds, setSeconds] = useState(0);
 
   useEffect(() => {
@@ -28,5 +23,5 @@ export default function Timer({ running }: TimerProps) {
     };
   }, [running]);
 
-  return <div>{formatMMSS(seconds)}</div>;
+  return <div></div>;
 } 
