@@ -19,15 +19,16 @@ Candidates will be asked to implement 5 core features:
 
 1. **Live mm:ss display** - Replace console.log with visible timer (01:05)
 2. **Persist elapsed time** - Store/restore timer state from localStorage
-3. **Start/Stop All** - Add header button to control all timers
-4. **Overdue indicator** - Visual feedback when time exceeds allocation
-5. **POST on stop** - Complete the API endpoint and call it when timers stop
+3. **API Route loading** - Create a GET endpoint to fetch tasks from JSON and update the UI
+4. **Start/Stop All** - Add header button to control all timers
+5. **Overdue indicator** - Visual feedback when time exceeds allocation
+6. **POST on stop** - Complete the API endpoint and call it when timers stop
 
 Plus an optional bonus: **Dark mode toggle**
 
 ## Tech Stack
 
-- **Next.js 14** (App Router)
+- **Next.js 16** (App Router)
 - **TypeScript** (strict mode)
 - **CSS Modules** for styling
 - **npm / pnpm** for package management
@@ -63,14 +64,23 @@ zen-task/
 ├── app/
 │   ├── layout.tsx          # Root layout
 │   ├── page.tsx            # Main task list page
+│   ├── page.module.css     # Page styles
 │   ├── globals.css         # Global styles
-│   └── api/time/route.ts   # API endpoint skeleton (returns 501)
+│   ├── favicon.ico         # App favicon
+│   └── api/
+│       └── time/
+│           └── route.ts    # API endpoint skeleton (returns 501)
 ├── components/
 │   ├── TaskRow.tsx         # Individual task component
 │   ├── TaskRow.module.css  # Task row styles
 │   └── Timer.tsx           # Timer component (console.log only)
 ├── lib/
-│   └── useTaskStore.ts     # Zustand store
+│   ├── TaskContext.tsx     # Task context and types
+│   └── tasks.json          # Task data
+├── public/                 # Static assets
+├── next.config.ts          # Next.js configuration
+├── tsconfig.json           # TypeScript configuration
+├── eslint.config.mjs       # ESLint configuration
 └── package.json
 ```
 

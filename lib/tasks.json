@@ -1,0 +1,8 @@
+[
+  { "id": 1, "title": "HR interview", "allocatedMinutes": 1 },
+  { "id": 2, "title": "Phone interview", "allocatedMinutes": 15 },
+  { "id": 3, "title": "Technical interview", "allocatedMinutes": 5 },
+  { "id": 4, "title": "Final interview", "allocatedMinutes": 30 },
+  { "id": 5, "title": "Offer negotiation", "allocatedMinutes": 45 }
+]
+

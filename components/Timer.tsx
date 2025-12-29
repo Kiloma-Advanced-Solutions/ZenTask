@@ -12,28 +12,16 @@ export default function Timer({ running }: TimerProps) {
 
   useEffect(() => {
     if (!running) return;
-    
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    const id = setInterval(() => {
-      setSeconds(s => {
-        const newSeconds = s + 1;
-        console.log(newSeconds);
-        return newSeconds;
-      });
+
+    const id = window.setInterval(() => {
+      setSeconds((s) => s + 1);
     }, 1000);
-    
 
-    return () => clearInterval(id);
-  }, [running]);
-
-  useEffect(() => {
-    if (!running) {
+    return () => {
+      window.clearInterval(id);
       setSeconds(0);
-    }
+    };
   }, [running]);
 
-  // TODO: Candidate should replace console.log with visible mm:ss display
-  return (
-    <div></div>
-  );
+  return <div></div>;
 } 
