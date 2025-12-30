@@ -14,7 +14,11 @@ export default function Timer({ running }: TimerProps) {
     if (!running) return;
 
     const id = window.setInterval(() => {
-      setSeconds((s) => s + 1);
+      setSeconds((prevSeconds) =>  { 
+        const newSeconds = prevSeconds + 1;
+        console.log(newSeconds);
+        return newSeconds;
+      } );
     }, 1000);
 
     return () => {
