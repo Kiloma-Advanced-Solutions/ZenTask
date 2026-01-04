@@ -14,11 +14,7 @@ export default function Timer({ running }: TimerProps) {
     if (!running) return;
 
     const id = window.setInterval(() => {
-      setSeconds((prevSeconds) =>  { 
-        const newSeconds = prevSeconds + 1;
-        console.log(newSeconds);
-        return newSeconds;
-      } );
+      setSeconds((prevSeconds) => { return prevSeconds + 1; });
     }, 1000);
 
     return () => {
@@ -26,6 +22,12 @@ export default function Timer({ running }: TimerProps) {
       setSeconds(0);
     };
   }, [running]);
+
+
+  useEffect(() => {
+    console.log(seconds);
+  }, [seconds]);
+
 
   return <div></div>;
 } 
